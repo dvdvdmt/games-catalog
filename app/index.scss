@@ -1,44 +1,62 @@
 body {
-  background-color: #5A5A5A; }
+  background-color: #5A5A5A;
+}
 
 .container {
   display: flex;
   width: 100%;
   padding-top: 50px;
   padding-left: 15vw;
-  padding-right: 15vw; }
+  padding-right: 15vw;
+}
 
 .games {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-row-gap: 25px; }
+  grid-row-gap: 25px;
+}
 
 .game {
   display: flex;
   flex-flow: column;
   align-items: center;
   text-align: center;
-  width: 150px; }
-  .game img {
+  width: 150px;
+
+  img {
     width: 150px;
     height: 200px;
-    background-color: #000000; }
-  .game-btn {
+    background-color: #000000;
+  }
+
+  &-btn {
+    $card-btn-bg-color: #3B3D3D;
+
     width: 150px;
     padding: 5px 0;
-    background-color: #3B3D3D;
+    background-color: $card-btn-bg-color;
     cursor: pointer;
-    color: #60CCFF; }
-    .game-btn:hover {
-      background-color: #222323; }
-    .game-btn.in-list {
-      color: #6CFE91; }
-  .game-name {
+    color: #60CCFF;
+
+    &:hover {
+      background-color: darken($card-btn-bg-color, 10%);
+    }
+
+    &.in-list {
+      color: #6CFE91;
+    }
+  }
+
+  &-name {
     margin-top: 5px;
-    color: #FFFFFF; }
-  .game-price {
-    color: #BABABA; }
+    color: #FFFFFF;
+  }
+
+  &-price {
+    color: #BABABA;
+  }
+}
 
 .wish-list {
   position: -webkit-sticky;
@@ -46,34 +64,45 @@ body {
   top: 1px;
   flex: 0 0 33.33333%;
   align-self: flex-start;
-  padding-left: 20px; }
+  padding-left: 20px;
+}
 
 @media screen and (max-width: 1024px) {
   .container {
     padding-left: 5vw;
-    padding-right: 5vw; }
+    padding-right: 5vw;
+  }
 
   .games {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding-left: 1vw;
-    padding-right: 1vw; }
+    padding-right: 1vw;
+  }
 
   .games {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (max-width: 425px) {
   .container {
     flex-flow: column-reverse;
     padding-left: 1vw;
-    padding-right: 1vw; }
+    padding-right: 1vw;
+  }
 
   .games {
-    grid-template-columns: repeat(2, 1fr); }
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .wish-list {
     flex: 1;
     padding-left: 0;
-    margin-bottom: 20px; } }
-
-/*# sourceMappingURL=index.css.map */
+    margin-bottom: 20px;
+  }
+}
