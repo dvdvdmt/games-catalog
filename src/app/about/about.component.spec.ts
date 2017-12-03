@@ -1,6 +1,6 @@
-import {TestBed} from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import {AboutComponent} from './about.component';
+import { AboutComponent } from './about.component';
 
 describe('About Component', () => {
   beforeEach(() => {
