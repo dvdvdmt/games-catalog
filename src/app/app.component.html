@@ -1,17 +1,25 @@
-<header>
-  <nav>
-    <a [routerLink]="['']">Home</a>
-    <a [routerLink]="['about']">About</a>
-  </nav>
-</header>
-<main>
-  <h1>Hello from {{title}}!</h1>
-
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/img/angular.png" >
-
-  <router-outlet></router-outlet>
+<main class="container">
+  <div class="games">
+    <div class="game-card">
+      <img width="150" height="200" src="http://via.placeholder.com/300x400" alt="Game poster" >
+      <div class="game-card-btn">Добавить</div>
+      <div class="game-card-name">Alien Isolation</div>
+      <div class="game-card-price">999 руб.</div>
+    </div>
+    <div class="game-card">
+      <img width="150" height="200" src="http://via.placeholder.com/300x400" alt="Game poster" >
+      <div class="game-card-btn in-list">В списке</div>
+      <div class="game-card-name">Call of Duty: Advanced Warfare</div>
+      <div class="game-card-price">1500 руб.</div>
+    </div>
+  </div>
+  <aside class="wish-list">
+    <h2>Список желаемого</h2>
+    <ul>
+      <li><span class="wish-list-game">Game 1</span> <div class="wish-list-remove-btn"></div></li>
+      <li><span class="wish-list-game">Game 2</span> <div class="wish-list-remove-btn"></div></li>
+    </ul>
+    <div class="wish-list-total">Сумма: <span class="wish-list-total-sum">2050</span> руб.</div>
+    <div class="wish-list-clear-btn">Очистить список</div>
+  </aside>
 </main>
-<footer>
-  <a [href]="url">Webpack Angular 2 Starter</a>
-</footer>
