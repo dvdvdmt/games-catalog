@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ApiService } from './shared';
 import { routing } from './app.routing';
+import { GameCardComponent } from './game-card/game-card.component';
 
 // import { createNewHosts, removeNgStyles } from '@angularclass/hmr';
 
@@ -18,6 +19,7 @@ import { routing } from './app.routing';
   ],
   declarations: [
     AppComponent,
+    GameCardComponent
   ],
   providers: [
     ApiService
@@ -25,4 +27,5 @@ import { routing } from './app.routing';
   bootstrap: [AppComponent]
 })
 
-export class AppModule {}
+export class AppModule {
+}

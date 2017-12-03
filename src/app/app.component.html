@@ -1,23 +1,6 @@
 <main class="container">
   <div class="games">
-    <div class="game-card">
-      <img width="150" height="200" src="http://via.placeholder.com/300x400" alt="Game poster" >
-      <div class="game-card-btn">Добавить</div>
-      <div class="game-card-name">Alien Isolation</div>
-      <div class="game-card-price">999 руб.</div>
-    </div>
-    <div class="game-card">
-      <img width="150" height="200" src="http://via.placeholder.com/300x400" alt="Game poster" >
-      <div class="game-card-btn in-list">В списке</div>
-      <div class="game-card-name">Call of Duty: Advanced Warfare</div>
-      <div class="game-card-price">1500 руб.</div>
-    </div>
-    <div class="game-card">
-      <img width="150" height="200" src="http://via.placeholder.com/300x400" alt="Game poster" >
-      <div class="game-card-btn in-list">В списке</div>
-      <div class="game-card-name">Call of Duty: Advanced Warfare</div>
-      <div class="game-card-price">1500 руб.</div>
-    </div>
+    <my-game-card *ngFor="let game of games" [game]="game"></my-game-card>
   </div>
   <aside class="wish-list">
     <h2>Список желаемого</h2>

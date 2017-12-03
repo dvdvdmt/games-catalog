@@ -13,47 +13,6 @@
   grid-row-gap: 25px;
 }
 
-.game-card {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  text-align: center;
-  width: 150px;
-
-  img {
-    width: 150px;
-    height: 200px;
-    background-color: #000000;
-  }
-
-  &-btn {
-    $card-btn-bg-color: #3B3D3D;
-
-    width: 150px;
-    padding: 5px 0;
-    background-color: $card-btn-bg-color;
-    cursor: pointer;
-    color: #60CCFF;
-
-    &:hover {
-      background-color: darken($card-btn-bg-color, 10%);
-    }
-
-    &.in-list {
-      color: #6CFE91;
-    }
-  }
-
-  &-name {
-    margin-top: 5px;
-    color: #FFFFFF;
-  }
-
-  &-price {
-    color: #BABABA;
-  }
-}
-
 .wish-list {
   $wish-list-em-color: #60CCFF;
 
