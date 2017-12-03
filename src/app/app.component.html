@@ -7,10 +7,10 @@
     <ul>
       <li *ngFor="let game of getWishedGames()">
         <span class="wish-list-game">{{game.name}}</span>
-        <div class="wish-list-remove-btn"></div>
+        <div class="wish-list-remove-btn" (click)="removeGame(game.id)"></div>
       </li>
     </ul>
-    <div class="wish-list-total">Сумма: <span class="wish-list-total-sum">2050</span> руб.</div>
-    <div class="wish-list-clear-btn">Очистить список</div>
+    <div class="wish-list-total">Сумма: <span class="wish-list-total-sum">{{getTotalPrice()}}</span> руб.</div>
+    <div class="wish-list-clear-btn" (click)="clearWishList()">Очистить список</div>
   </aside>
 </main>

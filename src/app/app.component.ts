@@ -22,4 +22,30 @@ export class AppComponent {
   getWishedGames() {
     return this.games.filter(game => game.isWished);
   }
+
+  removeGame(gameId: number) {
+    this.games = this.games.map(game => {
+      if (game.id === gameId) {
+        game.isWished = false;
+      }
+      return game;
+    });
+  }
+
+  getTotalPrice() {
+    return this.games.reduce(
+      (acc, game) => {
+        acc += game.isWished ? game.price : 0;
+        return acc;
+      }, 0);
+  }
+
+  clearWishList() {
+    this.games = this.games.map(game => {
+      if (game.isWished) {
+        game.isWished = false;
+      }
+      return game;
+    });
+  }
 }
