@@ -121,7 +121,9 @@
 
   .wish-list {
     flex: 1;
-    padding-left: 0;
+    width: 100%;
+    position: static;
+    margin-left: 0;
     margin-bottom: 20px;
   }
 }
