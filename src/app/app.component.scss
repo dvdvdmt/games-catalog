@@ -10,6 +10,7 @@
   flex: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
   grid-row-gap: 25px;
 }
 
@@ -105,6 +106,18 @@
 
   .games {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media screen and (max-width: 530px) {
+  .container {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+
+  .games {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

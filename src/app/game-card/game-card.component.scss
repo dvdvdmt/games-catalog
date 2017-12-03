@@ -1,8 +1,11 @@
-.game-card {
+.game-card-container {
   display: flex;
   flex-flow: column;
   align-items: center;
   text-align: center;
+}
+
+.game-card {
   width: 150px;
 
   img {
