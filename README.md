@@ -5,7 +5,7 @@ A SPA made with Angular2 and CSS grids that presents a list of games.
 To make this test app Preboot's [angular-webpack](https://github.com/preboot/angular-webpack.git) seed was used.
 
 ## Live demo
-You can find live demo of this app here [https://dvdvdmt.github.io/games-catalog/]() .
+You can find live demo of this app here [https://dvdvdmt.github.io/games-catalog/](https://dvdvdmt.github.io/games-catalog/) .
 
 ## Getting Started
 
@@ -22,4 +22,4 @@ $ npm install
 # start the server
 $ npm start
 ```
-After that you can find a running app in dev mode on [http://localhost:8080/games-catalog/]() .
+After that you can find a running app in dev mode on [http://localhost:8080/games-catalog/](https://dvdvdmt.github.io/games-catalog/) .
