@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { ApiService } from './shared';
 
@@ -10,16 +10,16 @@ import { Game } from './shared/game.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   games: Game[] = [];
 
-  constructor(private api: ApiService) {
-    this.api.fetchGames().then((games: Game[]) => {
+  constructor(api: ApiService) {
+    api.fetchGames().then((games: Game[]) => {
       this.games = games;
     });
   }
 
-  ngOnInit(): void {
-    console.log('loading games... 1 2 3');
+  getWishedGames() {
+    return this.games.filter(game => game.isWished);
   }
 }

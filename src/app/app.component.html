@@ -5,8 +5,8 @@
   <aside class="wish-list">
     <h2>Список желаемого</h2>
     <ul>
-      <li>
-        <span class="wish-list-game">Game 1</span>
+      <li *ngFor="let game of getWishedGames()">
+        <span class="wish-list-game">{{game.name}}</span>
         <div class="wish-list-remove-btn"></div>
       </li>
     </ul>
