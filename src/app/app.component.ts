@@ -48,4 +48,22 @@ export class AppComponent {
       return game;
     });
   }
+
+  addToWishList($gameId: number) {
+    this.games = this.games.map(game => {
+      if (game.id === $gameId) {
+        game.isWished = true;
+      }
+      return game;
+    });
+  }
+
+  removeFromWishList($gameId: number) {
+    this.games = this.games.map(game => {
+      if (game.id === $gameId) {
+        game.isWished = false;
+      }
+      return game;
+    });
+  }
 }

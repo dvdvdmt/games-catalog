@@ -1,6 +1,11 @@
 <main class="container">
   <div class="games">
-    <my-game-card *ngFor="let game of games" [game]="game"></my-game-card>
+    <my-game-card
+      *ngFor="let game of games"
+      (onAdd)="addToWishList($event)"
+      (onRemove)="removeFromWishList($event)"
+      [game]="game"
+    ></my-game-card>
   </div>
   <aside class="wish-list">
     <h2>Список желаемого</h2>

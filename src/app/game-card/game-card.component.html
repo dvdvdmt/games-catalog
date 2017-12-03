@@ -1,8 +1,7 @@
 <div *ngIf="game" class="game-card">
   <img width="150" height="200" src="{{game.posterUrl}}" alt="Game poster" >
-  <div class="game-card-btn" [class.in-list]="game.isWished">
-    {{game.isWished? 'Удалить': 'Добавить'}}
-  </div>
+  <div *ngIf="!game.isWished" (click)="add(game)" class="game-card-btn">Добавить</div>
+  <div *ngIf="game.isWished" (click)="remove(game)" class="game-card-btn in-list">Удалить</div>
   <div class="game-card-name">{{game.name}}</div>
   <div class="game-card-price">{{game.price}} руб.</div>
 </div>
