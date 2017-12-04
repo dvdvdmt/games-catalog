@@ -4,6 +4,7 @@ import { ApiService } from './shared';
 
 import '../style/app.css';
 import { Game } from './shared/game.model';
+import { LocalStorageService } from './shared/local.storage.service';
 
 @Component({
   selector: 'my-app', // <my-app></my-app>
@@ -13,7 +14,7 @@ import { Game } from './shared/game.model';
 export class AppComponent {
   games: Game[] = [];
 
-  constructor(api: ApiService) {
+  constructor(api: ApiService, private storage: LocalStorageService) {
     api.fetchGames().then((games: Game[]) => {
       this.games = games;
     });
@@ -30,6 +31,7 @@ export class AppComponent {
       }
       return game;
     });
+    this.storage.setData(this.games);
   }
 
   getTotalPrice() {
@@ -47,6 +49,7 @@ export class AppComponent {
       }
       return game;
     });
+    this.storage.setData(this.games);
   }
 
   addToWishList($gameId: number) {
@@ -56,6 +59,7 @@ export class AppComponent {
       }
       return game;
     });
+    this.storage.setData(this.games);
   }
 
   removeFromWishList($gameId: number) {
@@ -65,5 +69,6 @@ export class AppComponent {
       }
       return game;
     });
+    this.storage.setData(this.games);
   }
 }

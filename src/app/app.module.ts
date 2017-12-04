@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ApiService } from './shared';
 import { routing } from './app.routing';
 import { GameCardComponent } from './game-card/game-card.component';
+import { LocalStorageService } from './shared/local.storage.service';
 
 // import { createNewHosts, removeNgStyles } from '@angularclass/hmr';
 
@@ -22,7 +23,8 @@ import { GameCardComponent } from './game-card/game-card.component';
     GameCardComponent
   ],
   providers: [
-    ApiService
+    ApiService,
+    LocalStorageService
   ],
   bootstrap: [AppComponent]
 })
