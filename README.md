@@ -14,7 +14,7 @@ You can find live demo of this app here [https://dvdvdmt.github.io/games-catalog
 $ git clone https://github.com/dvdvdmt/games-catalog.git games-catalog
 
 # change directory to your app
-$ cd my-app
+$ cd games-catalog
 
 # install the dependencies with npm
 $ npm install
